@@ -1,0 +1,3 @@
+/home/sheep/git/CPPMath/cmake-build-debug/CMakeFiles/CPPMath.dir
+/home/sheep/git/CPPMath/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sheep/git/CPPMath/cmake-build-debug/CMakeFiles/rebuild_cache.dir
