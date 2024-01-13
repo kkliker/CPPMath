@@ -3,5 +3,5 @@ project(CPPMath)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CPPMath src/main.cpp
+add_library (CPPMath src/main.cpp
         src/CPPMath.cpp)

@@ -41,7 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/sheep/git/CPPMath/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target CPPMath
+# Object build statements for STATIC_LIBRARY target CPPMath
 
 
 #############################################
@@ -63,19 +63,19 @@ build CMakeFiles/CPPMath.dir/src/CPPMath.cpp.o: CXX_COMPILER__CPPMath_unscanned_
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target CPPMath
+# Link build statements for STATIC_LIBRARY target CPPMath
 
 
 #############################################
-# Link the executable CPPMath
+# Link the static library libCPPMath.a
 
-build CPPMath: CXX_EXECUTABLE_LINKER__CPPMath_Debug CMakeFiles/CPPMath.dir/src/main.cpp.o CMakeFiles/CPPMath.dir/src/CPPMath.cpp.o
-  FLAGS = -g
+build libCPPMath.a: CXX_STATIC_LIBRARY_LINKER__CPPMath_Debug CMakeFiles/CPPMath.dir/src/main.cpp.o CMakeFiles/CPPMath.dir/src/CPPMath.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/CPPMath.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = CPPMath
-  TARGET_PDB = CPPMath.dbg
+  TARGET_FILE = libCPPMath.a
+  TARGET_PDB = CPPMath.a.dbg
 
 
 #############################################
@@ -103,6 +103,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build CPPMath: phony libCPPMath.a
+
 # =============================================================================
 # Folder targets.
 
@@ -111,7 +113,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/sheep/git/CPPMath/cmake-build-debug
 
-build all: phony CPPMath
+build all: phony libCPPMath.a
 
 # =============================================================================
 # Built-in targets
